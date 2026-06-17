@@ -1,0 +1,75 @@
+
+> frontend@0.0.0 lint
+> eslint .
+
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/components/MaterialStepper.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/context/AuthContext.jsx
+  28:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  26 |
+  27 |   useEffect(() => {
+> 28 |     checkUser();
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  29 |   }, [checkUser]);
+  30 |
+  31 |   const login = async (credentials) => {  react-hooks/set-state-in-effect
+  50:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-refresh/only-export-components
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/layouts/AppLayout.jsx
+  21:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/LandingPage.jsx
+  15:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                    no-unused-vars
+  34:9   error  'springX' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u          no-unused-vars
+  37:11  error  'scrollYProgress' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/doctor/DoctorAppointments.jsx
+  18:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/doctor/DoctorDashboard.jsx
+  17:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/doctor/PatientDetail.jsx
+  22:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u          no-unused-vars
+  30:10  error  'error' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/doctor/PatientList.jsx
+  18:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/patient/DiabetesScreening.jsx
+  1:38  error  'useCallback' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/patient/HistoryPage.jsx
+  17:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/patient/LiverScreening.jsx
+  1:38  error  'useCallback' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/patient/PatientAppointments.jsx
+  16:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/patient/PatientDashboard.jsx
+  25:10  error  'stats' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/patient/PredictionResult.jsx
+  19:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/patient/ProfilePage.jsx
+  21:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+/Users/ishaanjain/DL PROJECT/healthapp/frontend/src/pages/shared/ProfilePage.jsx
+   1:38  error  'useCallback' is defined but never used. Allowed unused vars must match /^[A-Z_]/u     no-unused-vars
+  25:17  error  'login' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  52:13  error  'res' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u    no-unused-vars
+
+✖ 22 problems (22 errors, 0 warnings)
+
